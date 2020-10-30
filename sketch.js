@@ -1,0 +1,16 @@
+function setup() {
+  createCanvas(1200,800);
+  fixedrect=createSprite(400, 100, 50, 80);
+movingrect=createSprite(400,800,80,30);
+movingrect.velocityY=-5
+fixedrect.velocityY=+5
+}
+
+function draw() {
+  background(0);  
+//console.log(movingrect.x-fixedrect.x)
+bounceOff(movingrect,fixedrect);
+
+  drawSprites();
+}
+
